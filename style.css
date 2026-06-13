@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +19,9 @@ body {
   overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
   position: fixed;
@@ -30,7 +36,7 @@ body {
 
   z-index: 1000;
 
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
 }
 
@@ -55,7 +61,9 @@ body {
   opacity: 0.6;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 100vh;
@@ -81,7 +89,7 @@ body {
   font-size: 7rem;
   font-weight: 900;
 
-  color: rgba(173,216,230,0.12);
+  color: rgba(173, 216, 230, 0.12);
 
   animation: scroll 18s linear infinite;
 }
@@ -121,7 +129,9 @@ body {
   color: #b8b8b8;
 }
 
-/* SECTION TITLES */
+/* =========================
+   SECTION TITLES
+========================= */
 
 .section-title,
 .skills-header,
@@ -131,7 +141,9 @@ body {
   margin-bottom: 70px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about {
   padding: 140px 10%;
@@ -171,7 +183,9 @@ body {
   margin-bottom: 10px;
 }
 
-/* TIMELINE */
+/* =========================
+   TIMELINE
+========================= */
 
 .timeline-section {
   padding: 140px 10%;
@@ -230,7 +244,9 @@ body {
   max-width: 700px;
 }
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 .skills {
   background: #f3f3f3;
@@ -267,7 +283,9 @@ body {
   font-size: 1.1rem;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects {
   padding: 140px 10%;
@@ -283,6 +301,24 @@ body {
   padding: 40px;
 
   margin-bottom: 40px;
+
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(185,227,255,0.4);
+}
+
+.featured-project {
+  border: 2px solid #b9e3ff;
+
+  background: linear-gradient(
+    180deg,
+    rgba(185,227,255,0.08),
+    #0d0d0d
+  );
 }
 
 .project-top {
@@ -295,7 +331,7 @@ body {
 .project-top span {
   color: #b9e3ff;
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .project-top a {
@@ -327,15 +363,30 @@ body {
   flex-wrap: wrap;
 }
 
-.project-tags span {
+.project-tags span,
+.project-tags a {
   padding: 10px 16px;
 
   border-radius: 999px;
 
   border: 1px solid rgba(255,255,255,0.12);
+
+  color: white;
+
+  text-decoration: none;
 }
 
-/* RESUME */
+/* =========================
+   GITHUB
+========================= */
+
+.github-section {
+  padding: 140px 10%;
+}
+
+/* =========================
+   RESUME
+========================= */
 
 .resume-section {
   padding: 140px 10%;
@@ -371,7 +422,9 @@ body {
   border-radius: 999px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
   padding: 140px 10%;
@@ -406,7 +459,9 @@ body {
   border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 900px) {
 
@@ -416,6 +471,7 @@ body {
 
   .nav-links {
     gap: 18px;
+    flex-wrap: wrap;
   }
 
   .hero-center h1 {
@@ -446,5 +502,15 @@ body {
 
   .marquee-track {
     font-size: 4rem;
+  }
+
+  .project-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
   }
 }
